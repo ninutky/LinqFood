@@ -72,7 +72,8 @@ namespace LinqFood
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            foodBindingSource.DataSource = from item in foods
+                                           select item;
         }
     }
 }
