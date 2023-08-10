@@ -47,27 +47,37 @@ namespace LinqFood
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            foodBindingSource.DataSource = from item in foods
+                                           select item;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            foodBindingSource.DataSource = from item in foods
+                                           where item.Type == "한식"
+                                           select item;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            foodBindingSource.DataSource = from item in foods
+                                           where item.Type == "중식"
+                                           select item;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            foodBindingSource.DataSource = from item in foods
+                                           where item.Type == "일식"
+                                           select item;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            foodBindingSource.DataSource = from item in foods
+                                           where item.Price <= 10000
+                                           orderby item.Price
+                                           select item;
         }
 
         private void Form1_Load(object sender, EventArgs e)

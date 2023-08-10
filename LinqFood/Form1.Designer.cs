@@ -36,10 +36,10 @@ namespace LinqFood
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.foodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -105,13 +105,9 @@ namespace LinqFood
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(391, 105);
             this.button5.TabIndex = 5;
-            this.button5.Text = "높은 가격 순";
+            this.button5.Text = "10000원 이하 음식 (낮은 가격 순)";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // foodBindingSource
-            // 
-            this.foodBindingSource.DataSource = typeof(LinqFood.Food);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -130,6 +126,10 @@ namespace LinqFood
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // foodBindingSource
+            // 
+            this.foodBindingSource.DataSource = typeof(LinqFood.Food);
             // 
             // Form1
             // 
